@@ -23,6 +23,30 @@ namespace Client
         public MainWindow()
         {
             InitializeComponent();
+           
         }
-    }
+
+
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Programm p = new Programm();
+            
+        }
+
+        public  void Write(string input)
+        {
+            Output.Text = input;
+        }
+
+        public  string ReadLine()
+        {
+            return Input.Text;
+        }
+
+    }  
+
+    
+
 }

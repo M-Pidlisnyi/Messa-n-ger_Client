@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <TextBlock Name="Output" Height="350"
+                       Background="LightGray"/>
+            <Line Height="10"/>
+            <TextBox Name="Input" Height="50"
+                     VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <Button Height="70" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                Width="200" Content="Run Client" FontSize="24"
+                Click="Button_Click"/>
     </Grid>
 </Window>
