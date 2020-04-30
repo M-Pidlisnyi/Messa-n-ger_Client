@@ -5,17 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <StackPanel>
-            <TextBlock Name="Output" Height="350"
-                       Background="LightGray"/>
-            <Line Height="10"/>
-            <TextBox Name="Input" Height="50"
-                     VerticalAlignment="Bottom"/>
-        </StackPanel>
-        <Button Height="70" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                Width="200" Content="Run Client" FontSize="24"
-                Click="Button_Click"/>
+        Title="Messa(n)ger" Height="450" Width="800">
+    <Grid Name="LayoutGrid">
+        <Grid Name="Left" HorizontalAlignment="Left">
+            <TextBlock Name="Output" FontSize="20" FontFamily="Comic Sans MS"
+                   Background="LightGray" Width="500" VerticalAlignment="Top"
+                   HorizontalAlignment="Left" Height="350"/>
+
+            
+            <TextBox Name="Input" Height="50" Width="500" HorizontalAlignment="Left"
+                     VerticalAlignment="Bottom" Margin="0,0,0,70"/>
+
+            <Button Width="166" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                Height="70" Content="Send Message" FontSize="24"
+                Click="SendMessage"/>
+
+            <Button Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                Width="166" Content="Refresh" FontSize="24"
+                Click="RefreshMessages" />
+
+            <Button Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                Width="166" Content="Close Client" FontSize="24"
+                Click="CloseClient"/>
+        </Grid>
+        
+        <Grid Name="Right" HorizontalAlignment="Right">
+            <TextBlock Name="DebugInfo"  Width="285"
+                   FontSize="12" FontFamily="Consolas" Foreground="Green"
+                   Background="Black"/>
+
+        </Grid>
     </Grid>
+    
 </Window>
